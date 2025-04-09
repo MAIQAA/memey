@@ -5,9 +5,9 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Help", href: "#" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Walkthrough", href: "#" },
+    { label: "Help", href: "/help" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Walkthrough", href: "/walkthrough" },
   ];
 
   return (
@@ -15,8 +15,18 @@ export const Navbar = () => {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <span className="font-['Pacifico'] text-xl sm:text-2xl text-black">
-              logo
+            <span className="flex gap-1 items-center text-xl lg:text-2xl text-black">
+              <a href="/" className="flex items-center gap-2">
+                <img
+                  src="/mmy-logo.webp"
+                  width={50}
+                  height={50}
+                  alt="Memey Logo"
+                />
+                <h5 className="hidden xl:flex" style={{ fontWeight: 550 }}>
+                  Measure Menu Y (MeMeY)
+                </h5>
+              </a>
             </span>
           </div>
           {/* Desktop Navigation */}
@@ -30,9 +40,14 @@ export const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <button className="rounded-md bg-black text-white px-4 sm:px-6 py-2 text-sm lg:text-base hover:bg-black/90 transition-colors duration-200">
-              Download
-            </button>
+            <a
+              className="text-white"
+              href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0"
+            >
+              <button className="rounded-md bg-black px-4 sm:px-6 py-2 text-sm lg:text-base hover:scale-105 transition-transformation duration-200">
+                Download
+              </button>
+            </a>
           </div>
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">

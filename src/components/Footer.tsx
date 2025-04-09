@@ -1,3 +1,5 @@
+import SmoothScrollLink from "./SmoothScrollLink";
+
 interface Link {
   label: string;
   href: string;
@@ -14,12 +16,12 @@ const FooterLinkList: React.FC<FooterLinkListProps> = ({ title, links }) => (
     <ul className="space-y-1 sm:space-y-2">
       {links.map((link, index) => (
         <li key={index}>
-          <a
+          <SmoothScrollLink
             href={link.href}
             className="text-gray-600 hover:text-black text-sm sm:text-base"
           >
             {link.label}
-          </a>
+          </SmoothScrollLink>
         </li>
       ))}
     </ul>
@@ -31,25 +33,24 @@ const Footer = () => {
     {
       title: "Product",
       links: [
-        { label: "Features", href: "#" },
-        { label: "Integrations", href: "#" },
-        { label: "Download", href: "#" },
+        { label: "Features", href: "#Feature" },
+        { label: "Comparison", href: "#Comparison" },
+        {
+          label: "Download",
+          href: "https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=31b82d5dypdj74g7dcahiacwe&st=lo13dbcn&dl=0",
+        },
       ],
     },
     {
       title: "Support",
       links: [
-        { label: "Help Center", href: "#" },
-        { label: "Documentation", href: "#" },
-        { label: "Contact", href: "#" },
+        { label: "Help Center", href: "/help" },
+        { label: "WalkThrough", href: "/walkthrough" },
       ],
     },
     {
       title: "Legal",
-      links: [
-        { label: "Privacy Policy", href: "#" },
-        { label: "Terms of Service", href: "#" },
-      ],
+      links: [{ label: "Privacy Policy", href: "/privacy-policy" }],
     },
   ];
 
@@ -58,8 +59,18 @@ const Footer = () => {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           <div>
-            <span className="font-['Pacifico'] text-xl sm:text-2xl mb-3 sm:mb-4 block">
-              logo
+            <span className="flex gap-1 items-center text-xl lg:text-2xl text-black mb-3">
+              <a href="/" className="flex items-center gap-3">
+                <img
+                  src="/mmy-logo.webp"
+                  width={50}
+                  height={50}
+                  alt="Memey Logo"
+                />
+                <h5 className="hidden xl:flex" style={{ fontWeight: 550 }}>
+                  MeMeY
+                </h5>
+              </a>
             </span>
             <p className="text-gray-600 text-sm sm:text-base">
               Built for students, by students.

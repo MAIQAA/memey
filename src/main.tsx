@@ -13,13 +13,16 @@ import "@fontsource/inter/800.css";
 import "@fontsource/pacifico/400.css";
 import { Navbar } from './components/Navbar.tsx';
 import Footer from './components/Footer.tsx';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <BrowserRouter>
     <Navbar/>
     <App />
     <Footer/>
+    </BrowserRouter>
   </StrictMode>,
 )
