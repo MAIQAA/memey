@@ -1,7 +1,7 @@
 import React from "react";
-import { MediaText } from "../../components/walkThrough/mediaText";
-import { MinitoolsSection } from "../../components/walkThrough/miniToolsSection";
-import { ExtrasSection } from "../../components/walkThrough/extrasSection";
+import { MediaText } from "../components/walkThrough/mediaText";
+import { MinitoolsSection } from "../components/walkThrough/miniToolsSection";
+import { ExtrasSection } from "../components/walkThrough/extrasSection";
 
 const walkthrough: React.FC = () => {
   const facts = [

@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Home } from "./pages/home/home";
-import BluePillSection from "./pages/blue-pill/bluePillPage";
-import RedPillSection from "./pages/red-pill/redPillPage";
-import HelpSection from "./pages/help/helpPage";
-import PrivacyPolicy from "./pages/privacyPolicy/privacyPolicyPage";
-import WalkThrough from "./pages/walkthrough/walkThroughPage";
+import { Home } from "./home/home";
+import BluePillSection from "./blue-pill/bluePillPage";
+import RedPillSection from "./red-pill/redPillPage";
+import HelpSection from "./help/helpPage";
+import PrivacyPolicy from "./privacyPolicy/privacyPolicyPage";
+import WalkThrough from "./walkthrough/walkThroughPage";
 
 function App() {
   return (

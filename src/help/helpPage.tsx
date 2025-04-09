@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { TutorialVideosSection } from "../../components/helpSection/tutorialVideoSection";
-import { FAQSection } from "../../components/helpSection/faqSection";
+import { TutorialVideosSection } from "../components/helpSection/tutorialVideoSection";
+import { FAQSection } from "../components/helpSection/faqSection";
 
 const HelpSection: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
