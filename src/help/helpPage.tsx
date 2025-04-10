@@ -1,66 +1,88 @@
-import React, { useState } from "react";
-import { TutorialVideosSection } from "../components/helpSection/tutorialVideoSection";
-import { FAQSection } from "../components/helpSection/faqSection";
+import React from "react";
+import { BiSupport } from "react-icons/bi";
 
-const HelpSection: React.FC = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const faqs = [
+const HelpPage: React.FC = () => {
+  const videos = [
     {
-      question: "How do I get started with MeMeY?",
-      answer:
-        'To get started, download MeMeY using the "GET MEMEY" button on the Blue Pill or Red Pill page. Follow the login tutorial below to set up your account, and use the data import tutorial to load your dataset.',
+      title: "MeMeY Login Tutorial",
+      src: "https://www.youtube.com/embed/XX-QzrtxOac?rel=0",
     },
     {
-      question: "What kind of data does MeMeY support?",
-      answer:
-        "MeMeY supports CSV, Excel, and JSON file formats. Ensure your data is clean and properly formatted for the best results. Check the data import tutorial for more details.",
+      title: "MeMeY Data Import Tutorial",
+      src: "https://www.youtube.com/embed/m2j1lmkSA3Q?rel=0",
     },
     {
-      question: "Can I schedule a personalized demo?",
-      answer:
-        'Yes! Click the "Schedule a Demo" button below to book a live session with our team. We’ll walk you through MeMeY’s features and answer any questions you have.',
+      title: "MeMeY THE Pro Tip",
+      src: "https://www.youtube.com/embed/Ia97htsVDZg?rel=0",
     },
   ];
 
   return (
     <main className="relative bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        {/* Header Section */}
         <div className="text-center animate-fade-in">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
-            You’ve come to the right place.
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 sm:mb-8">
+            Help & Support
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-            We’re here to help you get the most out of MeMeY. Reach out via
-            email or phone, explore our tutorials, or dive into our FAQ section
-            for quick answers.
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
+            Watch our tutorial videos to get the most out of MeMeY or check our
+            FAQs for common questions.
           </p>
         </div>
-        <TutorialVideosSection />
-        <FAQSection faqs={faqs} openFaq={openFaq} setOpenFaq={setOpenFaq} />
-      </div>
 
-      {/* Custom Animation Styles */}
-      <style>
-        {`
-          @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-          }
-          .animate-fade-in {
-            animation: fadeIn 1s ease-in-out;
-          }
-          @keyframes slideUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-          }
-          .animate-slide-up {
-            animation: slideUp 0.8s ease-in-out;
-          }
-        `}
-      </style>
+        {/* Tutorial Videos Section */}
+        <div className="mt-12 sm:mt-16 animate-fade-in">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-800 text-center mb-8 sm:mb-12">
+            Tutorial Videos (Soundless)
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos.map((video, index) => {
+              return (
+                <div
+                  key={index}
+                  className="relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <iframe
+                    title={video.title}
+                    width="100%"
+                    height="200"
+                    src={video.src}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-full"
+                    loading="lazy"
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="mt-12 sm:mt-16 text-center animate-fade-in">
+          <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+            Need more help? Check our FAQs or reach out to our support team!
+          </p>
+          <a
+            href="/faq"
+            className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-4"
+          >
+            View FAQs
+          </a>
+          <a
+            href="mailto:support@memey.cloud"
+            className="inline-flex items-center justify-center text-blue-600 hover:text-blue-800 text-base sm:text-lg font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          >
+            <BiSupport className="w-5 h-5 mr-2" />
+            Contact Support
+          </a>
+        </div>
+      </div>
     </main>
   );
 };
 
-export default HelpSection;
+export default HelpPage;

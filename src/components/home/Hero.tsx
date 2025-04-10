@@ -11,21 +11,21 @@ export const Hero = () => {
                 🚀 Simplify Your Research
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-8 sm:mt-10 lg:mt-4 mb-6 sm:mb-8 leading-tight bg-gradient-to-r from-black via-purple-600 to-blue-600 text-transparent bg-clip-text">
+            <h1 className="text-4xl  md:text-5xl lg:text-7xl font-bold mt-8 sm:mt-10 lg:mt-4 mb-6 sm:mb-8 leading-tight bg-gradient-to-r from-black via-purple-600 to-blue-600 text-transparent bg-clip-text">
               Data Analysis Made Easy for Students
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 lg:mb-10 leading-relaxed">
               MeMeY simplifies research data analysis while maintaining powerful
               capabilities. Focus on results, not complexity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:space-x-7">
               <SmoothScrollLink className="text-white" href="#choose-path">
-                <button className="rounded-lg bg-black  px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-base sm:text-lg hover:bg-black/90 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                <button className="rounded-lg bg-black  px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm md:text-base lg:text-lg hover:bg-black/90 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                   Get Started
                 </button>
               </SmoothScrollLink>
               <a className="text-black" href="/help">
-                <button className="rounded-lg border-2 border-black  px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-base sm:text-lg hover:bg-black/5 transform hover:-translate-y-1 transition-all duration-300">
+                <button className="rounded-lg border-2 border-black  px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm md:text-base lg:text-lg hover:bg-black/5 transform hover:-translate-y-1 transition-all duration-300">
                   Learn More
                 </button>
               </a>

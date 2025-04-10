@@ -6,6 +6,7 @@ export const Navbar = () => {
 
   const navLinks = [
     { label: "Help", href: "/help" },
+    { label: "FAQ", href: "/faq" },
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Walkthrough", href: "/walkthrough" },
   ];

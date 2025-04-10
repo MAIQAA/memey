@@ -82,7 +82,7 @@ const ChoosePath = () => {
 
   return (
     <main className="relative mt-12 sm:mt-16 md:mt-[4.15rem]" id="choose-path">
-      <div className="w-full max-w-8xl mx-auto py-8 sm:py-10 lg:py-[3.35rem] px-4 sm:px-6 lg:px-8 bg-gradient-to-t from-gray-50 to-white">
+      <div className="w-full max-w-8xl mx-auto py-8 sm:py-10 lg:py-[3.35rem] px-4 sm:px-6 lg:px-8 bg-white">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 bg-gradient-to-r from-black to-blue-600 bg-clip-text text-transparent">
           Choose Your Path
         </h2>

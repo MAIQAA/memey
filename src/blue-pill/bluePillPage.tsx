@@ -4,7 +4,6 @@ const BluePillSection: React.FC = () => {
   return (
     <main className="relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        {/* Cover Section */}
         <div className="relative rounded-xl overflow-hidden mx-auto">
           <div className="relative">
             <img
@@ -16,16 +15,15 @@ const BluePillSection: React.FC = () => {
               src="/blue-pill.png"
               sizes="(max-width: 1024px) 100vw, 1024px"
             />
-            {/* Backdrop Filter Overlay */}
+
             <div className="absolute inset-0 bg-[#b3c3dc]/40" />
-            {/* Centered Text */}
+
             <p className="absolute inset-0 flex items-center justify-center text-center text-xl md:text-2xl xl:text-[40px] font-bold text-[#17191b] px-4">
               A softer approach…
             </p>
           </div>
         </div>
 
-        {/* Content Section */}
         <div className="mt-8 sm:mt-12 lg:mt-16 space-y-4 sm:space-y-6 text-gray-700 font-medium text-base">
           <p>What’s the simplest tool you’ve ever learned how to use?</p>
           <p>Perhaps a fork? A whistle? Glasses?</p>
@@ -57,7 +55,6 @@ const BluePillSection: React.FC = () => {
           <p>Sounds good, right?</p>
         </div>
 
-        {/* Button Section */}
         <div className="mt-8 sm:mt-12 flex justify-center">
           <a
             href="https://www.dropbox.com/scl/fo/vs0kd7ouak67dj3dtihhq/APcMhaGyeXZ6To5ge-T3mTU?rlkey=3jssbcausnjpbwv6qp9t9hgi0&st=6fm5cfcb&dl=0"
